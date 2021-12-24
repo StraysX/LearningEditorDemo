@@ -1,0 +1,6 @@
+G:\gy\test\Rotorz\Rotorz\bin\Debug\Rotorz.dll
+G:\gy\test\Rotorz\Rotorz\bin\Debug\Rotorz.pdb
+G:\gy\test\Rotorz\Rotorz\obj\Debug\Rotorz.csproj.AssemblyReference.cache
+G:\gy\test\Rotorz\Rotorz\obj\Debug\Rotorz.csproj.CoreCompileInputs.cache
+G:\gy\test\Rotorz\Rotorz\obj\Debug\Rotorz.dll
+G:\gy\test\Rotorz\Rotorz\obj\Debug\Rotorz.pdb

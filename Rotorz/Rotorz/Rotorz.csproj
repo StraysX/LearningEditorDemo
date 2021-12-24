@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BAA811E5-DD61-4118-A4A8-704B44B180AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rotorz</RootNamespace>
+    <AssemblyName>Rotorz</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dotnet-exception-utils\Source\ExceptionUtility.cs" />
+    <Compile Include="dotnet-type-utils\Source\DependencyAttribute.cs" />
+    <Compile Include="dotnet-type-utils\Source\Reflection\TypeMeta.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="unity3d-editor-menu\Editor\EditorMenu.cs" />
+    <Compile Include="unity3d-editor-menu\Editor\EditorMenuCommandBinder.cs" />
+    <Compile Include="unity3d-editor-menu\Editor\EditorMenuCommandEntry.cs" />
+    <Compile Include="unity3d-editor-menu\Editor\EditorMenuEntry.cs" />
+    <Compile Include="unity3d-editor-menu\Editor\EditorMenuInternalUtility.cs" />
+    <Compile Include="unity3d-editor-menu\Editor\EditorMenuPresenterUtility.cs" />
+    <Compile Include="unity3d-editor-menu\Editor\EditorMenuPresenter_GenericMenu.cs" />
+    <Compile Include="unity3d-editor-menu\Editor\EditorMenuSeparatorBinder.cs" />
+    <Compile Include="unity3d-editor-menu\Editor\EditorMenuSeparatorEntry.cs" />
+    <Compile Include="unity3d-editor-menu\Editor\EditorMenuSettings.cs" />
+    <Compile Include="unity3d-editor-menu\Editor\IEditorMenuEntry.cs" />
+    <Compile Include="unity3d-editor-menu\Editor\IEditorMenuEntryParameter.cs" />
+    <Compile Include="unity3d-editor-menu\Editor\IEditorMenuPresenter.cs" />
+    <Compile Include="unity3d-package-utils\Editor\PackageUtility.cs" />
+    <Compile Include="unity3d-reorderable-list\Editor\Collections\ElementAdderMenu\ElementAdderMenuCommandAttribute.cs" />
+    <Compile Include="unity3d-reorderable-list\Editor\Collections\ElementAdderMenu\ElementAdderMenuCommandMeta.cs" />
+    <Compile Include="unity3d-reorderable-list\Editor\Collections\ElementAdderMenu\ElementAdderMenuPopulator.cs" />
+    <Compile Include="unity3d-reorderable-list\Editor\Collections\ElementAdderMenu\IElementAdder.cs" />
+    <Compile Include="unity3d-reorderable-list\Editor\Collections\ElementAdderMenu\IElementAdderMenuCommand.cs" />
+    <Compile Include="unity3d-reorderable-list\Editor\Collections\GenericListAdaptor.cs" />
+    <Compile Include="unity3d-reorderable-list\Editor\Collections\IReorderableListAdaptor.cs" />
+    <Compile Include="unity3d-reorderable-list\Editor\Collections\IReorderableListDropTarget.cs" />
+    <Compile Include="unity3d-reorderable-list\Editor\Collections\ReorderableListControl.cs" />
+    <Compile Include="unity3d-reorderable-list\Editor\Collections\ReorderableListEvents.cs" />
+    <Compile Include="unity3d-reorderable-list\Editor\Collections\ReorderableListGUI.cs" />
+    <Compile Include="unity3d-reorderable-list\Editor\Collections\ReorderableListPropertyDrawer.cs" />
+    <Compile Include="unity3d-reorderable-list\Editor\Collections\ReorderableListStyles.cs" />
+    <Compile Include="unity3d-reorderable-list\Editor\Collections\SerializedPropertyAdaptor.cs" />
+    <Compile Include="unity3d-reorderable-list\Editor\Collections\SerializedPropertyWithDropTargetAdaptor.cs" />
+    <Compile Include="unity3d-reorderable-list\Source\Collections\ReorderableListAttribute.cs" />
+    <Compile Include="unity3d-reorderable-list\Source\Collections\ReorderableListFlags.cs" />
+    <Compile Include="unity3d-utils\Editor\UnityEditorExtensions\AssetUtility.cs" />
+    <Compile Include="unity3d-utils\Editor\UnityEditorExtensions\ControlContent.cs" />
+    <Compile Include="unity3d-utils\Editor\UnityEditorExtensions\EditorSingletonScriptableObject.cs" />
+    <Compile Include="unity3d-utils\Editor\UnityEditorExtensions\EditorSingletonUtility.cs" />
+    <Compile Include="unity3d-utils\Editor\UnityEditorExtensions\ExtraEditorGUI.cs" />
+    <Compile Include="unity3d-utils\Editor\UnityEditorExtensions\ExtraEditorStyles.cs" />
+    <Compile Include="unity3d-utils\Editor\UnityEditorExtensions\IEditorSingleton.cs" />
+    <Compile Include="unity3d-utils\Editor\UnityEditorExtensions\SerializedPropertyUtility.cs" />
+    <Compile Include="unity3d-utils\Source\DontDestroyOnLoad.cs" />
+    <Compile Include="unity3d-utils\Source\UnityExceptionUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dotnet-exception-utils\LICENSE" />
+    <None Include="dotnet-exception-utils\LICENSE.meta" />
+    <None Include="dotnet-exception-utils\package.json" />
+    <None Include="dotnet-exception-utils\package.json.meta" />
+    <None Include="dotnet-exception-utils\README.md" />
+    <None Include="dotnet-exception-utils\README.md.meta" />
+    <None Include="dotnet-exception-utils\Source.meta" />
+    <None Include="dotnet-exception-utils\Source\ExceptionUtility.cs.meta" />
+    <None Include="dotnet-exception-utils\Source\_assembly.asmdef" />
+    <None Include="dotnet-exception-utils\Source\_assembly.asmdef.meta" />
+    <None Include="dotnet-type-utils\LICENSE" />
+    <None Include="dotnet-type-utils\LICENSE.meta" />
+    <None Include="dotnet-type-utils\package.json" />
+    <None Include="dotnet-type-utils\package.json.meta" />
+    <None Include="dotnet-type-utils\README.md" />
+    <None Include="dotnet-type-utils\README.md.meta" />
+    <None Include="dotnet-type-utils\Source.meta" />
+    <None Include="dotnet-type-utils\Source\DependencyAttribute.cs.meta" />
+    <None Include="dotnet-type-utils\Source\Reflection.meta" />
+    <None Include="dotnet-type-utils\Source\Reflection\TypeMeta.cs.meta" />
+    <None Include="dotnet-type-utils\Source\_assembly.asmdef" />
+    <None Include="dotnet-type-utils\Source\_assembly.asmdef.meta" />
+    <None Include="unity3d-editor-menu\Editor.meta" />
+    <None Include="unity3d-editor-menu\Editor\EditorMenu.cs.meta" />
+    <None Include="unity3d-editor-menu\Editor\EditorMenuCommandBinder.cs.meta" />
+    <None Include="unity3d-editor-menu\Editor\EditorMenuCommandEntry.cs.meta" />
+    <None Include="unity3d-editor-menu\Editor\EditorMenuEntry.cs.meta" />
+    <None Include="unity3d-editor-menu\Editor\EditorMenuInternalUtility.cs.meta" />
+    <None Include="unity3d-editor-menu\Editor\EditorMenuPresenterUtility.cs.meta" />
+    <None Include="unity3d-editor-menu\Editor\EditorMenuPresenter_GenericMenu.cs.meta" />
+    <None Include="unity3d-editor-menu\Editor\EditorMenuSeparatorBinder.cs.meta" />
+    <None Include="unity3d-editor-menu\Editor\EditorMenuSeparatorEntry.cs.meta" />
+    <None Include="unity3d-editor-menu\Editor\EditorMenuSettings.cs.meta" />
+    <None Include="unity3d-editor-menu\Editor\IEditorMenuEntry.cs.meta" />
+    <None Include="unity3d-editor-menu\Editor\IEditorMenuEntryParameter.cs.meta" />
+    <None Include="unity3d-editor-menu\Editor\IEditorMenuPresenter.cs.meta" />
+    <None Include="unity3d-editor-menu\Editor\_assembly.asmdef" />
+    <None Include="unity3d-editor-menu\Editor\_assembly.asmdef.meta" />
+    <None Include="unity3d-editor-menu\LICENSE" />
+    <None Include="unity3d-editor-menu\LICENSE.meta" />
+    <None Include="unity3d-editor-menu\package.json" />
+    <None Include="unity3d-editor-menu\package.json.meta" />
+    <None Include="unity3d-editor-menu\README.md" />
+    <None Include="unity3d-editor-menu\README.md.meta" />
+    <None Include="unity3d-package-utils\Editor.meta" />
+    <None Include="unity3d-package-utils\Editor\PackageUtility.cs.meta" />
+    <None Include="unity3d-package-utils\Editor\_assembly.asmdef" />
+    <None Include="unity3d-package-utils\Editor\_assembly.asmdef.meta" />
+    <None Include="unity3d-package-utils\LICENSE" />
+    <None Include="unity3d-package-utils\LICENSE.meta" />
+    <None Include="unity3d-package-utils\package.json" />
+    <None Include="unity3d-package-utils\package.json.meta" />
+    <None Include="unity3d-package-utils\README.md" />
+    <None Include="unity3d-package-utils\README.md.meta" />
+    <None Include="unity3d-reorderable-list\Editor.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Collections.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Collections\ElementAdderMenu.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Collections\ElementAdderMenu\ElementAdderMenuCommandAttribute.cs.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Collections\ElementAdderMenu\ElementAdderMenuCommandMeta.cs.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Collections\ElementAdderMenu\ElementAdderMenuPopulator.cs.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Collections\ElementAdderMenu\IElementAdder.cs.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Collections\ElementAdderMenu\IElementAdderMenuCommand.cs.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Collections\GenericListAdaptor.cs.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Collections\IReorderableListAdaptor.cs.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Collections\IReorderableListDropTarget.cs.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Collections\ReorderableListControl.cs.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Collections\ReorderableListEvents.cs.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Collections\ReorderableListGUI.cs.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Collections\ReorderableListPropertyDrawer.cs.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Collections\ReorderableListStyles.cs.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Collections\SerializedPropertyAdaptor.cs.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Collections\SerializedPropertyWithDropTargetAdaptor.cs.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\ReorderableListStyles.asset" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\ReorderableListStyles.asset.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Source.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Source\dark_skin.psd" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Source\dark_skin.psd.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Source\light_skin.psd" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Source\light_skin.psd.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Button2_Active.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Button2_Active_Light.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Button2_Normal.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Button2_Normal_Light.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Button_Active.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Button_Active_Light.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Button_Normal.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Button_Normal_Light.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Container2Background.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Container2Background_Light.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\ContainerBackground.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\ContainerBackground_Light.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\GrabHandle.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\GrabHandle_Light.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_AddMenu_Active.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_AddMenu_Active_Light.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_AddMenu_Normal.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_AddMenu_Normal_Light.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Add_Active.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Add_Active_Light.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Add_Normal.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Add_Normal_Light.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Menu_Active.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Menu_Active_Light.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Menu_Normal.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Menu_Normal_Light.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Remove_Active.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Remove_Active_Light.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Remove_Normal.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Remove_Normal_Light.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\ItemButton_Active.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\ItemButton_Active_Light.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\SelectionBackground.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\SelectionBackground_Light.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\TitleBackground.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\Skin\Textures\TitleBackground_Light.png.meta" />
+    <None Include="unity3d-reorderable-list\Editor\_assembly.asmdef" />
+    <None Include="unity3d-reorderable-list\Editor\_assembly.asmdef.meta" />
+    <None Include="unity3d-reorderable-list\LICENSE" />
+    <None Include="unity3d-reorderable-list\LICENSE.meta" />
+    <None Include="unity3d-reorderable-list\package.json" />
+    <None Include="unity3d-reorderable-list\package.json.meta" />
+    <None Include="unity3d-reorderable-list\README.md" />
+    <None Include="unity3d-reorderable-list\README.md.meta" />
+    <None Include="unity3d-reorderable-list\Source.meta" />
+    <None Include="unity3d-reorderable-list\Source\Collections.meta" />
+    <None Include="unity3d-reorderable-list\Source\Collections\ReorderableListAttribute.cs.meta" />
+    <None Include="unity3d-reorderable-list\Source\Collections\ReorderableListFlags.cs.meta" />
+    <None Include="unity3d-reorderable-list\Source\_assembly.asmdef" />
+    <None Include="unity3d-reorderable-list\Source\_assembly.asmdef.meta" />
+    <None Include="unity3d-utils\Editor.meta" />
+    <None Include="unity3d-utils\Editor\Skin.meta" />
+    <None Include="unity3d-utils\Editor\Skin\ExtraEditorStyles.asset" />
+    <None Include="unity3d-utils\Editor\Skin\ExtraEditorStyles.asset.meta" />
+    <None Include="unity3d-utils\Editor\Skin\Textures.meta" />
+    <None Include="unity3d-utils\Editor\Skin\Textures\TrailingTipBackground.png.meta" />
+    <None Include="unity3d-utils\Editor\Skin\Textures\TrailingTipBackground_Light.png.meta" />
+    <None Include="unity3d-utils\Editor\Skin\Textures\UnderlineBackground.png.meta" />
+    <None Include="unity3d-utils\Editor\UnityEditorExtensions.meta" />
+    <None Include="unity3d-utils\Editor\UnityEditorExtensions\AssetUtility.cs.meta" />
+    <None Include="unity3d-utils\Editor\UnityEditorExtensions\ControlContent.cs.meta" />
+    <None Include="unity3d-utils\Editor\UnityEditorExtensions\EditorSingletonScriptableObject.cs.meta" />
+    <None Include="unity3d-utils\Editor\UnityEditorExtensions\EditorSingletonUtility.cs.meta" />
+    <None Include="unity3d-utils\Editor\UnityEditorExtensions\ExtraEditorGUI.cs.meta" />
+    <None Include="unity3d-utils\Editor\UnityEditorExtensions\ExtraEditorStyles.cs.meta" />
+    <None Include="unity3d-utils\Editor\UnityEditorExtensions\IEditorSingleton.cs.meta" />
+    <None Include="unity3d-utils\Editor\UnityEditorExtensions\SerializedPropertyUtility.cs.meta" />
+    <None Include="unity3d-utils\Editor\_assembly.asmdef" />
+    <None Include="unity3d-utils\Editor\_assembly.asmdef.meta" />
+    <None Include="unity3d-utils\LICENSE" />
+    <None Include="unity3d-utils\LICENSE.meta" />
+    <None Include="unity3d-utils\package.json" />
+    <None Include="unity3d-utils\package.json.meta" />
+    <None Include="unity3d-utils\README.md" />
+    <None Include="unity3d-utils\README.md.meta" />
+    <None Include="unity3d-utils\Source.meta" />
+    <None Include="unity3d-utils\Source\DontDestroyOnLoad.cs.meta" />
+    <None Include="unity3d-utils\Source\UnityExceptionUtility.cs.meta" />
+    <None Include="unity3d-utils\Source\_assembly.asmdef" />
+    <None Include="unity3d-utils\Source\_assembly.asmdef.meta" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Button2_Active.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Button2_Active_Light.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Button2_Normal.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Button2_Normal_Light.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Button_Active.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Button_Active_Light.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Button_Normal.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Button_Normal_Light.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Container2Background.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Container2Background_Light.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\ContainerBackground.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\ContainerBackground_Light.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\GrabHandle.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\GrabHandle_Light.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_AddMenu_Active.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_AddMenu_Active_Light.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_AddMenu_Normal.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_AddMenu_Normal_Light.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Add_Active.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Add_Active_Light.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Add_Normal.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Add_Normal_Light.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Menu_Active.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Menu_Active_Light.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Menu_Normal.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Menu_Normal_Light.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Remove_Active.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Remove_Active_Light.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Remove_Normal.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\Icon_Remove_Normal_Light.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\ItemButton_Active.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\ItemButton_Active_Light.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\SelectionBackground.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\SelectionBackground_Light.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\TitleBackground.png" />
+    <Content Include="unity3d-reorderable-list\Editor\Skin\Textures\TitleBackground_Light.png" />
+    <Content Include="unity3d-utils\Editor\Skin\Textures\TrailingTipBackground.png" />
+    <Content Include="unity3d-utils\Editor\Skin\Textures\TrailingTipBackground_Light.png" />
+    <Content Include="unity3d-utils\Editor\Skin\Textures\UnderlineBackground.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
